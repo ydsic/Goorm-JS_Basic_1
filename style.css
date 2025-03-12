@@ -1,0 +1,122 @@
+body {
+  position: relative;
+  background-color: black;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 30px 0px 40px;
+}
+
+header > div {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+nav {
+  top: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding-bottom: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+nav > .navi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 30px;
+  transition: 250ms;
+  cursor: pointer;
+}
+
+nav > .navi:hover {
+  color: yellow;
+}
+
+main > .mainContent {
+  position: absolute;
+  margin-top: 30px;
+  width: 100%;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.mission_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: normal;
+  font-size: 18px;
+  font-weight: 600;
+  border-top: 1px solid white;
+  margin-top: 50px;
+  padding-top: 20px;
+  width: 70%;
+}
+
+table {
+  border: 1px solid white;
+  margin: 50px 0 100px;
+}
+
+th, td {
+  text-align: center;
+  padding: 15px;
+}
+
+th {
+  border-bottom: 1px solid white;
+}
+
+.mission_content > .grid{
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1r 1fr;
+  gap: 20px;
+}
+
+.img.grid{
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  border-top: 0;
+}

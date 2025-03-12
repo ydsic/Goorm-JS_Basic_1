@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reset.css로 css초기화 -->
+  <link rel="stylesheet" href="reset_css/reset.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Goorm Mission JS Basic - 1</title>
+</head>
+<body>
+  <header>
+    <div> 
+      <a href="index.html">Goorm EXP Mission - 자바스크립트 기초 1</a>
+    </div>
+  </header>
+  
+  <!-- SEO를 위해 시맨틱 태그를 사용하여 상단에 메뉴바 지정 -->
+  <nav>
+    <p onclick='showContent1()' class="navi">var, let, const 비교하기</p>
+    <p onclick='showContent2()' class="navi">비교 연산자 이해하기</p>
+    <p onclick='showContent3()' class="navi">브라우저에서 error debug</p>
+    <p onclick='showContent4()' class="navi">산술 연산자 이해하기</p>
+    <p onclick='showContent5()' class="navi">동적인 웹페이지 구현하기</p>
+  </nav>
+
+<!-- JS파일 선언은 맨 아래에 이유와 함께 있습니다 -->
+
+<!-- <main> 부분에서는 다 결과물에 관한 내용 뿐이라 설명할게 딱히 없다고 생각이 들지만 설명이 필요한 부분이 있다면 말해주세요 -->
+<!-- 중간중간 태그 안에 바로 style을 써서 css를 주는 식으로 코드가 되어있는데 
+  어떤거는 값을 다르게 주고 싶고, 어떤건 안주고 싶은데 class를 나누자니 귀찮기도 해서 직접 style을 줬습니다 -->
+  <main>
+    <section id="mission1" class="mainContent">
+      <h1>var, let, const 비교하기</h1>
+      <h3>자바스크립트에서 변수를 선언하는 세 가지 방법인 var, let, const의 차이점을 이해합니다.</h3>
+      <h3>var, let, const의 재선언 가능 여부, 재할당 가능 여부 등의 내용을 담은 비교표를 정리하여 제출합니다.</h3>
+      
+      <section class="mission_content">
+        <p>자바스크립트에서는 총 3가지의 변수를 선언하는 방법이 있다</p>
+        <p style="font-size: 32px; margin: 25px 0 5px;">var</p>
+        <p>var은 ES6 이전에 사용하던 변수 선언 방법인데 중복 선언, 호이스팅 등 문제들이 있어서 지금은 거의 사용되지 않는다.</p>
+        <p style="font-size: 32px; margin: 25px 0 5px;">let, const</p>
+        <p>let과 const는 ES6에서 등장한 변수 선언 함수로 var을 단점을 고친 함수이다.</p>
+        <p>중복선언이 불가능하며 호이스팅은 아직 사라지진 않았지만 변수 선언 이전에 호출을 하면 에러가 난다. (var은 호출도 되고 undefined으로 표기)</p>
+        <p>let과 const의 차이점이라면 let은 한 번 입력된 값이라고 해도 계속해서 수정이 가능하지만</p>
+        <p>const는 한 번 입력된 값은 절대 바꿀 수 없다는 차이점이 있다. (객체, 배열 내부 값 제외)</p>
+
+        <table class="table">
+          <caption style="margin-bottom: 10px; font-size: 24px;">변수 함수 비교표</caption>
+          <thead>
+            <tr>
+              <th>종류</th>
+              <th>재선언</th>
+              <th>호이스팅 현상</th>
+              <th>스코프 범위</th>
+              <th>데이터 재할당</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>var</td>
+              <td>가능</td>
+              <td>있음. 선언 이전에 호출까지 가능</td>
+              <td>함수 스코프</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <td>let</td>
+              <td>불가능</td>
+              <td>있음. 선언 이전에 호출 시 에러</td>
+              <td>블록 스코프</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <td>const</td>
+              <td>불가능</td>
+              <td>있음. 선언 이전에 호출 시 에러</td>
+              <td>블록 스코프</td>
+              <td>불가능(객체, 배열 내부 데이터 제외)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <section id="mission2" class="mainContent">
+      <h1>비교 연산자 이해하기</h1>
+      <h3>자바스크립트의 비교 연산자 (==, ===, !=, !==, >, <, >=, <=)를 이해합니다.</h3>
+      <h3>비교 연산자를 활용한 간단한 코드를 작성하여 각 연산자의 동작 방식을 실습합니다.</h3>
+      <h3>비교 연산자를 활용한 간단한 코드를 제출합니다.</h3>
+      <section class="mission_content">
+        <section class="grid">
+          <p>a == b (같다)</p>
+          <p>a === b (완전히 같다)</p>
+          <p>a != b (같지 않다)</p>
+          <p>a !== b (완전히 같지 않다)</p>
+          <p>a > b (b보다 a가 크다)</p>
+          <p>a < b (a보다 b가 크다)</p>
+          <p>a >= b (b보다 a가 크거나 같다)</p>
+          <p>a <= b (a보다 b가 크거나 같다)</p>
+        </section>
+
+        <p style="font-size: 28px; margin-top: 50px; font-weight: 700;">예시코드</p>
+        <section class="img grid">
+          <img src="images/1.png">
+          <img src="images/2.png">
+          <img src="images/3.png">
+          <img src="images/4.png">
+        </section>
+        <p style="margin-top: 5px;">여기서 ==랑 ===의 차이는 ==는 값만 같으면 같다라고 해주지만</p>
+        <p style="margin-top: 5px;">===는 값과 타입형까지 다 맞아야하는 조금 더 엄격한 기준이라고 생각하면 될 거 같다</p>
+      </section>
+    </section>
+
+    <section id="mission3" class="mainContent">
+      <h1>브라우저에서 error debug</h1>
+      <h3>브라우저 콘솔을 사용하여 자바스크립트 오류를 디버깅하는 방법을 배웁니다. </h3>
+      <h3>F12 키를 눌러 개발자 도구를 열고, Console 탭과 Sources 탭을 사용하여 오류 메시지를 확인하고 오류를 해결하는 방법을 실습합니다.</h3>
+      <h3>F12 → Console → Sources 내용의 스크린샷을 제출합니다.</h3>
+      <section class="mission_content">
+        <p>어떤 부분이 예상치 못한 에러가 발생한다면 개발자 도구를 열어서</p>
+        <P>Console 탭을 확인해보면 어떤 파일, 몇 번째 줄에서 에러가 발생했는지 확인이 가능하다</P>
+        <section class="img grid">
+          <img src="images/5.png">
+          <img src="images/6.png">
+        </section>
+        <p style="margin-top: 5px;">index.js 라는 파일 안에 58번쨰 줄에서 9번째 글자인 b라는 변수를 찾을 수 없다고 뜨는 내용</p>
+      </section>
+    </section>
+
+    <section id="mission4" class="mainContent">
+      <h1>산술 연산자 이해하기</h1>
+      <h3>자바스크립트에서 사용할 수 있는 기본 산술 연산자 (+, -, *, /, %)를 이해합니다.</h3>
+      <h3>산술 연산자를 활용한 간단한 코드를 작성하여 각 연산자의 동작 방식을 배웁니다.</h3>
+      <h3>산술 연산자를 활용한 간단한 코드를 제출합니다.</h3>
+      <section class="mission_content">
+        <img src="images/7.png">
+      </section>
+    </section>
+
+    <section id="mission5" class="mainContent">
+      <h1>동적인 웹페이지 구현하기</h1>
+      <h3>자바스크립트를 사용하여 동적인 웹 페이지를 구현합니다.</h3>
+      <h3>이벤트 리스너 등 자바스크립트의 다양한 기능을 활용하여 사용자와 상호작용할 수 있는 웹 페이지를 작성합니다.</h3>
+      <h3>동적인 웹 페이지 코드 파일을 제출합니다.</h3>
+      <section class="mission_content">
+        <p>동적 웹페이지 제작 후 Netlify로 배포 후 Github 링크와 함께 제출</p>
+        <p>이 웹페이지를 만들면서 팀 스터디 팀원들에게도 깃허브 링크 공유와 주석을 추가함으로써</p>
+        <p>코드에 대한 피드백 및 다른 팀원은 이런 식으로 exp 미션을 진행했구나 하는 참고자료로 이용될 에정</p>
+        <img id='github' onclick="goGithub()" style='margin-top: 50px;' src="images/github-mark-white.svg">
+        <p style="margin-top: 10px;">아이콘을 누르면 깃허브로 이동합니다.</p>
+        <img style="margin-top: 50px;" src="images/8.png">
+        <p style="margin: 10px 0 100px";>깃허브 아이콘을 눌렀을 때 그냥 이동보다는 EventListener을 이용하여 하나라도 더 함수를 사용해보면서 연습</p>
+      </section>
+    </section>
+  </main>
+
+
+  <!-- JS 파일 로딩은 body 맨 아래에 해야지 혹시나 발생할 수 있는 에러를 줄일 수 있음 -->
+  <!-- 
+    코드는 위에서부터 아래로 순차적으로 컴퓨터가 읽어내려가기 때문에
+    웹 페이지 로딩 순서가 html로 먼저 뼈대가 잡히고 
+    css로 세부 디테일을 잡고 난 후 DOM을 건드는 JS파일을 읽게 하기 위함 
+  -->
+  <script src="index.js"></script>
+</body>
+</html>
