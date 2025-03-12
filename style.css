@@ -120,3 +120,21 @@ th {
   margin-top: 30px;
   border-top: 0;
 }
+
+
+#github {
+  cursor: pointer;
+}
+
+.spin {
+  animation: spin 1000ms infinite ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

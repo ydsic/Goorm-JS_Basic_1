@@ -18,6 +18,16 @@ function goGithub(){
   goGit.addEventListener('click', window.open('https://github.com/ydsic/Goorm-JS_Basic_1'));
 }
 
+// 깃허브 아이콘 이미지에 마우스 커서를 가져다가 대면 이 함수 실행
+function spin() {
+  const goGit = document.getElementById('github');
+  //addEventListener로 이벤트 추가 
+  goGit.addEventListener('mouseover', () => {
+    //toggle로 spin이란 클래스이름이 없으면 추가, 있다면 제거로 spin 애니메이션 추가 및 제거
+    goGit.classList.toggle('spin');
+  });
+}
+
 
 // nav 태그에서 버튼을 클릭 했을 때 클릭이 안된 나머지 section들을 숨기는 함수
 function hideAllContents() {
