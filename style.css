@@ -1,27 +1,26 @@
 body {
-  position: relative;
   background-color: black;
 }
 
 header {
-  width: 100vw;
-  display: flex;
+  width: 100vw; /* 가로로 화면에 꽉 차게 설정 */
+  display: flex; /* 중앙정렬 3종세트 */
   justify-content: center;
   align-items: center;
   color: white;
   margin: 30px 0px 40px;
 }
 
-header > div {
+header > div { 
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 700; /* 폰트 굵기 700 */
 }
 
-nav {
-  top: 50px;
+nav { 
+  top: 50px; /* display flex로 설정 후 header랑 간격 조절을 위해 위치 이동 */
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* 메뉴바들이 일정한 간격들을 가지고 가로로 나열  */
   align-items: center;
   color: white;
   padding-bottom: 5px;
@@ -48,7 +47,7 @@ nav > .navi:hover {
 }
 
 main > .mainContent {
-  position: absolute;
+  position: absolute; /* 메인콘텐츠들을 한곳에 모두 다 겹치기 위해 absolute로 고정 */
   margin-top: 30px;
   width: 100%;
   left: 0;
@@ -105,10 +104,9 @@ th {
 }
 
 .mission_content > .grid{
-  display: grid;
-  text-align: center;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1r 1fr;
+  display: grid; /* 비교 연산자 8개를 정렬하기 위해 grid 연습겸 사용 */
+  text-align: center; /* 텍스트 중앙정렬 */
+  grid-template-columns: repeat(4, 1fr); /* 가로로 4개를 똑같은 크기로 정렬 */
   gap: 20px;
 }
 
@@ -123,7 +121,7 @@ th {
 
 
 #github {
-  cursor: pointer;
+  cursor: pointer; /* 사진 위에 마우스 커서를 올리면 마우스 커서가 인풋창에 입력하는 것 처럼 보여서 조정 */
 }
 
 .spin {
